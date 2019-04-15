@@ -1,8 +1,7 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<title>Chat Bot</title>
-<meta charset="utf-8"/>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>
     var roomName = {{room_name_json}}
@@ -74,6 +73,8 @@
         border-radius: 15px;
         border: 1px solid black;
         margin: 40px 80px 0px 80px;
+        width:500px;
+        position:relative;
     }
     #chat_log {
         background-color: #F3F76F;
@@ -130,16 +131,97 @@
         color: #FFF;
     }
 </style>
-</head>
+   <title></title>
+   <!-- Latest compiled and minified CSS -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-<body>
-<div id="chat_container">
+   <!-- jQuery library -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+   <!-- Popper JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+   <!-- Latest compiled JavaScript -->
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+   <style media="screen">
+
+   .app-content {
+     margin:10px;
+     padding: 10px;
+   }
+
+   #hero-image {
+     height: 550px;
+     width: 100%;
+     background-color: #444;
+     background-image: url('https://im1.dineout.co.in/images/uploads/restaurant/sharpen/2/v/s/p20355-15175704855a7449b53ce58.jpg?w=1200&q=100');
+     background-size: cover;
+     background-repeat: no-repeat;
+     background-position: center;
+     position: relative;
+   }
+
+   #hero-image::before {
+     position: absolute;
+     left: 0;
+     top: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0,0,0,0.15);
+     content: "";
+   }
+
+   #hero-image #hero-title {
+     position: absolute;
+     background-color: #fff;
+     padding: 25px 60px;
+     left: 50%;
+     -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+     -o-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+     transform: translateX(-50%);
+     bottom: 0;
+     margin: 0px;
+     text-transform: uppercase;
+     font-weight: bold;
+     font-size: 1.6em;
+     letter-spacing: 0.4px;
+   }
+
+   .navbar-nav {
+       flex-direction: row;
+       padding:10px;
+       margin:10px;
+   }
+   .navbar-nav>li {
+     margin-right:20px;
+   }
+   </style>
+ </head>
+ <body>
+   <nav class="navbar navbar-default">
+     <div class="container-fluid">
+       <div class="navbar-header">
+         <a class="navbar-brand" href="#">Exquisite Eats</a>
+       </div>
+       <div class="">
+         <ul class="nav navbar-nav navbar-right">
+           <li class="active"><a href="/order">Order</a></li>
+           <li><a href="/track">Track</a></li>
+         </ul>
+       </div>
+     </div>
+   </nav>
+   <div id="hero-image">
+     <h1 id="hero-title">EXQUISITE EATS</h1>
+   </div>
+   <div id="chat_container">
     <div id="chat_log">
     </div>
     <div id="chat_input_container">
         <div><input id="chat_input" /></div>
     </div>
 </div>
-
-</body>
+ </body>
 </html>
